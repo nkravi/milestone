@@ -14,7 +14,7 @@ angular.module('milestone').controller('showMileStoneCntrl',function($scope,$loc
 	
 	$scope.reDrawChart = function(input){
 		var data = {
-    		url: 'http://localhost:5000/milestone', 
+    		url: '/milestone', 
     		method: "GET"
  		};
  		if(input.token){

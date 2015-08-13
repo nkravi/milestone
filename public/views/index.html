@@ -3,9 +3,11 @@
     <title>milestone dashboard</title>
   <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="/bower_components/angular-gantt/dist/angular-gantt.css" />
+  <link rel="stylesheet" href="/bower_components/angular-gantt/dist/angular-gantt-plugins.css" />
   </head>
-  <body>
-      
+  <body ng-strict-di>
+    <div ng-view></div>
   </body>
   <!-- vendor -->
   <script src="/bower_components/jquery/dist/jquery.min.js"></script>
@@ -13,12 +15,17 @@
   <script src="/bower_components/angular/angular.js"></script>
   <script src="/bower_components/angular-route/angular-route.js"></script>
   <script src="/bower_components/angular-resource/angular-resource.js"></script>
+  <script src="/bower_components/moment/moment.js"></script>
+  <script src="/bower_components/angular-moment/angular-moment.js"></script>
+  <script src="/bower_components/angular-gantt/dist/angular-gantt.js"></script>
+  <script src="/bower_components/angular-gantt/dist/angular-gantt-plugins.js"></script>
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
   <!-- App -->
   <script src="app.js"></script>
   <script src="routes.js"></script>
   
   <!-- Controllers -->
- 
+   <script src="controllers/showMileStoneController.js"></script>
   <!-- Services-->
   
   <!-- Directives-->

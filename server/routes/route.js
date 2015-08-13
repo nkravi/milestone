@@ -8,9 +8,7 @@ router.get('/', function(req, res) {
   res.sendFile('index.html',{root: path.join(__dirname,'./../../public/views')});
 });
 
-//require('./timelineRoute')(router);
-//require('./projectRoute')(router);
-//require('./aboutRoute')(router);
+require('./mileStoneRoute')(router);
 
 
 

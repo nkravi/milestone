@@ -22,9 +22,10 @@
   },
   "homepage": "https://github.com/nravi89/milestone",
   "dependencies": {
-    "express": "^4.13.3",
     "body-parser": "^1.12.4",
     "bower": "^1.4.1",
+    "express": "^4.13.3",
+    "github": "^0.2.4",
     "gulp": "^3.8.11",
     "gulp-nodemon": "^2.0.3"
   }

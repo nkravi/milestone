@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.use('/',routes);
 
 //create and start server
-var port   = process.env.PORT || 3000;
+var port   = process.env.PORT || 5000;
 var server = app.listen(port, function () {
 
   var host = server.address().address;

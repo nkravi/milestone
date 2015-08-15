@@ -12,12 +12,12 @@ app.use(bodyParser.json());
 app.use('/',routes);
 
 //create and start server
-var port   = process.env.PORT || 5000;
+var port   = process.env.PORT || 8080;
 var server = app.listen(port, function () {
 
   var host = server.address().address;
   var port = server.address().port;
 
-  console.log('Job App listening at http://%s:%s', host, port);
+  console.log('App listening at http://%s:%s', host, port);
 
 });

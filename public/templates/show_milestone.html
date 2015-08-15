@@ -1,13 +1,20 @@
 
-<div class="panel-footer">
+<form ng-submit="reDrawChart(input)">
+<div>
 	<label>User</label>
-	<input type="text" id="user" name="user" ng-model="input.user" >
+	<input type="text" id="user" name="user" ng-model="input.user" required>
 	<label>Repo</label>
-	<input type="text" id="repo" name="repo" ng-model="input.repo" >
+	<input type="text" id="repo" name="repo" ng-model="input.repo" required>
 	<label>Token</label>
 	<input type="text" id="token" name="token" ng-model="input.token" >
-	<input type="submit" value="Click" class="btn btn-success" ng-click="reDrawChart(input)">
+	<input type="submit" value="Click" class="btn btn-success">
  </div>
-<div id="chartdiv" style="height: 180px;"></div>
+</form>
+<div class="alert alert-danger" role="alert" ng-show="errflag">
+  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+  <span class="sr-only">Error:</span>
+  OOps ! something went wrong.
+</div>
+<div id="chartdiv" style="height: 1800px;"></div>
     
 

@@ -11,8 +11,14 @@ angular.module('milestone').controller('showMileStoneCntrl',function($scope,$loc
 	dataTable.addColumn({ type: 'string', id: 'Repo' });
     dataTable.addColumn({ type: 'date', id: 'Start' });
     dataTable.addColumn({ type: 'date', id: 'End' });
-	
+    dataTable.addColumn({ type: 'date', role: 'tooltip' });
+    var options = {
+    	//tooltip: {isHtml: true},
+        legend: 'none'
+  	};
+    $scope.errflag = false;
 	$scope.reDrawChart = function(input){
+		$scope.errflag = false;
 		var data = {
     		url: '/milestone', 
     		method: "GET"
@@ -33,12 +39,15 @@ angular.module('milestone').controller('showMileStoneCntrl',function($scope,$loc
  					}else{
  						due_on = new Date(out[i].created_at);
  					}
- 					dataTable.addRow([input.user+"/"+input.repo+"/"+out[i].title,new Date(out[i].created_at),due_on]);
+ 					dataTable.addRow([input.user+"/"+input.repo+"/"+out[i].title,due_on,due_on,due_on]);
+ 					//dataTable.addRow([input.user+"/"+input.repo+"/"+out[i].title,new Date(out[i].created_at),due_on]);
 				}
-    			chart.draw(dataTable);
+				if(out.length > 0)
+    				chart.draw(dataTable,options);
  				
  			},function(err){
- 				console.log(err.data);
+ 				$scope.errflag = true;
+ 				//console.log(err.data);
  		});
 	}
 });

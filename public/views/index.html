@@ -4,8 +4,13 @@
   <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
   </head>
-  <body ng-strict-di>
-    <div ng-view></div>
+  <body>
+    <div class="navbar navbar-default navbar-static-top">
+        <div class="navbar-header"><a class="navbar-brand" href="#/milestone">GitHub MileStone App</a>
+        </div>
+    </div>
+</div>
+    <div ng-view class="container-fluid"></div>
   </body>
   <!-- vendor -->
   <script src="/bower_components/jquery/dist/jquery.min.js"></script>
